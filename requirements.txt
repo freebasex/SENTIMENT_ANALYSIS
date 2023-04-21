@@ -1,0 +1,11 @@
+streamlit
+numpy
+pandas
+matplotlib
+scikit-learn
+pandas-profiling
+pickle
+string
+wordcloud
+speech_recognition
+plotly
