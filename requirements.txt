@@ -12,4 +12,4 @@ SpeechRecognition
 plotly
 nltk
 gtts
-playsound=1.2.2
+playsound==1.2.2
