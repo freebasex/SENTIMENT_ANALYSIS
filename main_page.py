@@ -94,7 +94,7 @@ file = open('files/vietnamese-stopwords.txt', 'r', encoding="utf8")
 stopwords_lst = file.read().split('\n')
 file.close()
 
-@st.cache_data
+#@st.cache_data
 def clean_text(comment):
     # # Xử lý tiếng việt thô
     comment = process_text(comment, emoji_dict, teen_dict, wrong_lst)
