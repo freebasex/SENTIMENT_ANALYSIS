@@ -6,5 +6,5 @@ seaborn
 scikit-learn
 pandas-profiling
 wordcloud
-speech_recognition
+#speech_recognition
 plotly
