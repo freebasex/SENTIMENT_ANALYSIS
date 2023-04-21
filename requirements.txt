@@ -8,3 +8,4 @@ pandas-profiling
 wordcloud
 #speech_recognition
 plotly
+nltk
