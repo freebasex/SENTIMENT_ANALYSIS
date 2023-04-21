@@ -7,5 +7,6 @@ scikit-learn
 pandas-profiling
 wordcloud
 #speech_recognition
+SpeechRecognition
 plotly
 nltk
