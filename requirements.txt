@@ -11,3 +11,4 @@ wordcloud
 SpeechRecognition
 plotly
 nltk
+gtts
