@@ -26,7 +26,7 @@ import os
 import warnings
 warnings.filterwarnings("ignore")
 
-@st.cache_data
+#@st.cache_data
 def process_text(text, emoji_dict, teen_dict, wrong_lst):
     document = text.lower()
     document = document.replace("’", '')
@@ -78,7 +78,7 @@ def process_text(text, emoji_dict, teen_dict, wrong_lst):
     return document
 
 # Chuẩn hóa unicode tiếng việt
-@st.cache_data
+#@st.cache_data
 def loaddicchar():
     uniChars = "àáảãạâầấẩẫậăằắẳẵặèéẻẽẹêềếểễệđìíỉĩịòóỏõọôồốổỗộơờớởỡợùúủũụưừứửữựỳýỷỹỵÀÁẢÃẠÂẦẤẨẪẬĂẰẮẲẴẶÈÉẺẼẸÊỀẾỂỄỆĐÌÍỈĨỊÒÓỎÕỌÔỒỐỔỖỘƠỜỚỞỠỢÙÚỦŨỤƯỪỨỬỮỰỲÝỶỸỴÂĂĐÔƠƯ"
     unsignChars = "aaaaaaaaaaaaaaaaaeeeeeeeeeeediiiiiooooooooooooooooouuuuuuuuuuuyyyyyAAAAAAAAAAAAAAAAAEEEEEEEEEEEDIIIOOOOOOOOOOOOOOOOOOOUUUUUUUUUUUYYYYYAADOOU"
@@ -92,14 +92,14 @@ def loaddicchar():
         dic[char1252[i]] = charutf8[i]
     return dic
 
-@st.cache_data
+#@st.cache_data
 def covert_unicode(txt):
     dicchar = loaddicchar()
     return regex.sub(
         r'à|á|ả|ã|ạ|ầ|ấ|ẩ|ẫ|ậ|ằ|ắ|ẳ|ẵ|ặ|è|é|ẻ|ẽ|ẹ|ề|ế|ể|ễ|ệ|ì|í|ỉ|ĩ|ị|ò|ó|ỏ|õ|ọ|ồ|ố|ổ|ỗ|ộ|ờ|ớ|ở|ỡ|ợ|ù|ú|ủ|ũ|ụ|ừ|ứ|ử|ữ|ự|ỳ|ý|ỷ|ỹ|ỵ|À|Á|Ả|Ã|Ạ|Ầ|Ấ|Ẩ|Ẫ|Ậ|Ằ|Ắ|Ẳ|Ẵ|Ặ|È|É|Ẻ|Ẽ|Ẹ|Ề|Ế|Ể|Ễ|Ệ|Ì|Í|Ỉ|Ĩ|Ị|Ò|Ó|Ỏ|Õ|Ọ|Ồ|Ố|Ổ|Ỗ|Ộ|Ờ|Ớ|Ở|Ỡ|Ợ|Ù|Ú|Ủ|Ũ|Ụ|Ừ|Ứ|Ử|Ữ|Ự|Ỳ|Ý|Ỷ|Ỹ|Ỵ',
         lambda x: dicchar[x.group()], txt)
 
-@st.cache_data
+#@st.cache_data
 def process_special_word(text):
     new_text = ''
     list_word=["không",'hông', "chẳng", "chả",'tránh','mà','khiến','chớ','lại','dẫu','nhưng','dù','tuy','bị','còn','thiếu']
@@ -120,7 +120,7 @@ def process_special_word(text):
         new_text = text
     return new_text.strip()
 
-@st.cache_data
+#@st.cache_data
 def process_postag_thesea(text):
     new_document = ''
     for sentence in sent_tokenize(text):
@@ -134,7 +134,7 @@ def process_postag_thesea(text):
     new_document = regex.sub(r'\s+', ' ', new_document).strip()
     return new_document
 
-@st.cache_data
+#@st.cache_data
 def remove_stopword(text, stopwords):
     ###### REMOVE stop words
     document = ' '.join('' if word in stopwords else word for word in text.split())
@@ -144,7 +144,7 @@ def remove_stopword(text, stopwords):
     return document
 
 
-@st.cache_data
+#@st.cache_data
 def format_bullet(list):
     st.markdown("""
         <style>
@@ -167,7 +167,7 @@ def format_bullet(list):
     st.write('\n\n')
 
 
-@st.cache_data
+#@st.cache_data
 def read_data():
     data=pd.read_csv('Products_Shopee_comments.csv')
     data.loc[data['rating']<=2,'class']=0
@@ -178,7 +178,7 @@ def read_data():
     return df
 
 df=read_data()
-@st.cache_data
+#@st.cache_data
 def review_data(data):
     st.dataframe(data.head())
     st.write('Số dòng dữ liệu: ',len(data))
