@@ -1,13 +1,12 @@
-streamlit==1.10.0
+streamlit
 underthesea
-numpy==1.22.4
-pandas==1.4.2
+numpy
+pandas
 matplotlib
 seaborn
 scikit-learn
 pandas-profiling
 wordcloud
-#speech_recognition
 SpeechRecognition
 plotly
 nltk
