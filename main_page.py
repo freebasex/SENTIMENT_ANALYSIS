@@ -207,7 +207,8 @@ elif st.session_state.sidebar1_option == "TỔNG QUAN DỮ LIỆU":
         #plt.title("Số lượng sản phẩm theo từng phân lớp Neg/Pos", fontsize=12,fontweight='bold', fontfamily='Tahoma')
 
         # Thiết lập kích thước biểu đồ
-        fig.set_size_inches(8, 5)
+        
+        #fig.set_size_inches(8, 5)
 
         # Hiển thị biểu đồ trong Streamlit
         st.pyplot(fig)
