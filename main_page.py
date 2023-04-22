@@ -521,28 +521,26 @@ elif st.session_state.sidebar1_option == "SENTIMENT ANALYSIS":
                     st.write('Phản hồi là tiêu cực')
             else:
                 st.write('Nhập vào một bình luận')
-    elif option == 'Nhập bằng giọng nói':
+    #elif option == 'Nhập bằng giọng nói':
         
-        i = 0
-        k = 0
-        if st.button("Bắt đầu nói",key="batdau"):
-            while True:
-                comment = hear()
-                st.empty()
-                st.text_area('**Phản hồi của khách hàng**',value=comment)
-                if comment != '':
-                    comment = clean_text(comment)
-                    comment = tfidf_model.transform([comment])
-                    y_predict = LogisticRegression_model.predict(comment)
+        #i = 0
+        #k = 0
+        #if st.button("Bắt đầu nói",key="batdau"):
+        #    while True:
+        #        comment = hear()
+        #        st.empty()
+        #        st.text_area('**Phản hồi của khách hàng**',value=comment)
+        #        if comment != '':
+        #            comment = clean_text(comment)
+        #            comment = tfidf_model.transform([comment])
+        #            y_predict = LogisticRegression_model.predict(comment)
 
-                    if y_predict[0] == 1:
-                        st.write('Phản hồi là tích cực')
-                    else:
-                        st.write('Phản hồi là tiêu cực')
-                break
-                #i = i +1
-                #if st.button("Ngưng bình luận",key="kethuc_" + str(i)):
-                #    break
+         #           if y_predict[0] == 1:
+        #                st.write('Phản hồi là tích cực')
+         #           else:
+        #                st.write('Phản hồi là tiêu cực')
+        #        break
+
                 
 elif st.session_state.sidebar1_option == "ĐÁNH GIÁ KẾT QUẢ":
     st.subheader("MỘT SỐ KẾT QUẢ")
