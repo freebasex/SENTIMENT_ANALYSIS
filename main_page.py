@@ -20,7 +20,7 @@ st.title("PROJECT SENTIMENT ANALYSIS")
 # Sử dụng mã HTML để định dạng văn bản
 st.write(
     '<style>'
-    'h1 { font-size: 25px; font-family: Tahoma; font-weight: bold; }'
+    'h1 { font-size: 25px; font-weight: bold; }'
     'ul { list-style-image: url("https://www.freeiconspng.com/uploads/heart-icon-clip-art--clipart-best-28.png"); }'
     '</style>'
     '<h1> ĐỒ ÁN DATA SCIENCES - MACHINE LEARNING </h1>', unsafe_allow_html=True)
@@ -112,7 +112,7 @@ st.markdown(
     """
     <style>
     .sidebar .sidebar-content {
-        font-family: 'Tahoma';
+        
         font-size: 20px;
         font-weight: bold;
     }
@@ -140,7 +140,7 @@ if st.session_state.sidebar1_option == "GIỚI THIỆU BÀI TOÁN":
         format_bullet(bullet_list2)
     
     st.markdown("""
-    <div style='border: 2px solid black; padding: 10px; font-family: Tahoma, sans-serif; font-size: 20px; color: blue;text-align: justify;background-color: #dcd0ff;'>
+    <div style='border: 2px solid black; padding: 10px; font-size: 20px; color: blue;text-align: justify;background-color: #dcd0ff;'>
         Shopee là một hệ sinh thái thương mại “all in one”, trong đó có shopee.vn, là một website thương mại điện tử đứng top 1 của Việt Nam và khu vực Đông Nam Á. Dựa trên lịch sử những bình luận và đánh giá của khách hàng đã có trước đó ở https://shopee.vn/...
         => Mục tiêu/ vấn đề: Xây dựng mô hình dự đoán giúp người bán hàng có thể biết được những phản hồi nhanh chóng của khách hàng về sản phẩm hay dịch vụ của họ (tích cực, tiêu cực hay trung tính), điều này giúp cho người bán biết được tình hình kinh doanh, hiểu được ý kiến của khách hàng từ đó giúp họ cải thiện hơn trong dịch vụ, sản phẩm.
     </div>""", unsafe_allow_html=True)
@@ -152,7 +152,7 @@ elif st.session_state.sidebar1_option == "TỔNG QUAN DỮ LIỆU":
     st.markdown("""
     <style>
         .css-1e3jvgh.e19wd2j90 .st-eb .st-ec {
-            font-family: 'Tahoma' !important;
+            
             text-align: justify !important;
             font-size: 20px !important;
         }
@@ -205,7 +205,7 @@ elif st.session_state.sidebar1_option == "TỔNG QUAN DỮ LIỆU":
         fig, ax = plt.subplots()
         ax.pie(values, labels=labels, autopct='%1.1f%%')
         ax.axis('equal')
-        plt.title("Số lượng sản phẩm theo từng phân lớp Neg/Pos", fontsize=12,fontweight='bold', fontfamily='Tahoma')
+        plt.title("Số lượng sản phẩm theo từng phân lớp Neg/Pos", fontsize=12,fontweight='bold')
 
         # Thiết lập kích thước biểu đồ
         
@@ -389,7 +389,7 @@ elif st.session_state.sidebar1_option == "SENTIMENT ANALYSIS":
 
                     ax = sns.countplot(x='sentiment', data=df_after_predict)
                     ax.axis('equal')
-                    plt.title("Thống kê phản hồi theo từng phân lớp Tích cực/ Tiêu cực", fontsize=12,fontweight='bold', fontfamily='Tahoma')
+                    plt.title("Thống kê phản hồi theo từng phân lớp Tích cực/ Tiêu cực", fontsize=12,fontweight='bold')
                     fig.set_size_inches(10,8)
                     st.pyplot(fig)
 
@@ -436,7 +436,7 @@ elif st.session_state.sidebar1_option == "SENTIMENT ANALYSIS":
 
                     ax = sns.countplot(x='sentiment', data=df_after_predict)
                     ax.axis('equal')
-                    plt.title("Thống kê phản hồi theo từng phân lớp Tích cực/ Tiêu cực", fontsize=12,fontweight='bold', fontfamily='Tahoma')
+                    plt.title("Thống kê phản hồi theo từng phân lớp Tích cực/ Tiêu cực", fontsize=12,fontweight='bold')
                     fig.set_size_inches(8, 5)
                     st.pyplot(fig)
 
@@ -478,7 +478,7 @@ elif st.session_state.sidebar1_option == "SENTIMENT ANALYSIS":
 
                     ax = sns.countplot(x='sentiment', data=df_after_predict)
                     ax.axis('equal')
-                    plt.title("Thống kê phản hồi theo từng phân lớp Tích cực/ Tiêu cực", fontsize=12,fontweight='bold', fontfamily='Tahoma')
+                    plt.title("Thống kê phản hồi theo từng phân lớp Tích cực/ Tiêu cực", fontsize=12,fontweight='bold')
                     st.pyplot(fig)
 
                     text = "<span style='color:red'><b>Tải tập tin .TXT kết quả dự đoán</b></span>"
@@ -522,9 +522,7 @@ elif st.session_state.sidebar1_option == "SENTIMENT ANALYSIS":
             else:
                 st.write('Nhập vào một bình luận')
     #elif option == 'Nhập bằng giọng nói':
-        
-        #i = 0
-        #k = 0
+
         #if st.button("Bắt đầu nói",key="batdau"):
         #    while True:
         #        comment = hear()

@@ -149,7 +149,7 @@ def format_bullet(list):
     st.markdown("""
         <style>
             ul.bullet {
-                font-family: 'Tahoma', sans-serif;
+                
                 list-style-type: none;
                 padding-left: 0;
             }
