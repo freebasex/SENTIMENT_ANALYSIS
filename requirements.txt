@@ -3,6 +3,7 @@ underthesea
 numpy==1.22.4
 pandas==1.4.2
 matplotlib
+matplotlib.pyplot
 seaborn
 scikit-learn
 pandas-profiling
