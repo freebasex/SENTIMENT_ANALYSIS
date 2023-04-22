@@ -201,19 +201,19 @@ elif st.session_state.sidebar1_option == "TỔNG QUAN DỮ LIỆU":
         labels=['Negative','Postive']
         values=data_class['sum_of_products']
         # Vẽ biểu đồ hình tròn
-        
-        #fig, ax = plt.subplots()
-        #ax.pie(values, labels=labels, autopct='%1.1f%%')
-        #ax.axis('equal')
-        #plt.title("Số lượng sản phẩm theo từng phân lớp Neg/Pos", fontsize=12,fontweight='bold', fontfamily='Tahoma')
+
+        fig, ax = plt.subplots()
+        ax.pie(values, labels=labels, autopct='%1.1f%%')
+        ax.axis('equal')
+        plt.title("Số lượng sản phẩm theo từng phân lớp Neg/Pos", fontsize=12,fontweight='bold', fontfamily='Tahoma')
 
         # Thiết lập kích thước biểu đồ
         
-        #fig.set_size_inches(8, 5)
+        fig.set_size_inches(8, 5)
 
         # Hiển thị biểu đồ trong Streamlit
 
-        #st.pyplot(fig)
+        st.pyplot(fig)
 
         st.text_area('Minh hoạ nội dung 1 phản hồi của khách hàng:',df['comment'].iloc[0])
 
